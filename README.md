@@ -2,203 +2,114 @@
 
 📌 Project Overview
 
-This project is a **simulation of an Applicant Tracking System (ATS)** used by companies to screen resumes.
+The Automated Resume Screening Tool is a Python-based application that simulates how companies filter and shortlist resumes using technology.
 
-In real companies, HR teams receive **hundreds of resumes** for one job.
-Manually checking all resumes is time-consuming.
+In real-world hiring, recruiters receive a large number of applications. This tool helps automate the initial screening process by:
 
-👉 This tool helps **automate that process** by:
+Reading resumes
+Extracting skills
+Comparing them with job requirements
+Generating a match score
 
-* Reading resumes
-* Comparing them with job descriptions
-* Identifying relevant skills
-* Giving a matching score
+It acts as a mini Applicant Tracking System (ATS) built using Python and basic NLP techniques.
 
----
+❗ Problem Statement
 
-🎯 Objective
+Recruiters often face challenges such as:
 
-The goal of this project is to build a system that:
+Too many resumes to review manually
+Time-consuming shortlisting process
+Human bias and inconsistency
+Missing qualified candidates due to manual errors
 
-* Extracts important information from resumes
-* Matches resumes with job requirements
-* Helps HR quickly shortlist candidates
+👉 This project solves these problems by:
 
----
+Automating resume screening
+Providing objective scoring
+Highlighting relevant skills quickly
 
-🛠️ Technologies Used
+🌍 Industry Relevance
 
-* **Python** → Main programming language
-* **FastAPI** → To create backend API
-* **Scikit-learn** → For similarity calculation (TF-IDF, Cosine Similarity)
-* **Basic NLP** → For skill extraction
+This project is highly relevant in industries like:
 
----
+Human Resource Management (HRM)
+Recruitment & Talent Acquisition
+HR Tech and SaaS platforms
 
-⚙️ How It Works (Step-by-Step)
+Real companies use similar systems (ATS) to:
 
-1. Resume Upload
+Filter resumes automatically
+Rank candidates
+Improve hiring efficiency
 
-User uploads a resume file (currently `.txt` format).
+👉 This project demonstrates how technology supports data-driven hiring decisions.
 
-2. Job Description Input
-
-User enters the job description manually.
-
-3. Text Processing
-
-The system reads both:
-
-* Resume text
-* Job description text
-
----
-4. Skill Extraction
-
-The system checks for predefined skills like:
-
-* Python
-* SQL
-* Excel
-* Tableau
-* Communication
-
----
-
-5. Similarity Calculation
-
-The system compares resume and job description using:
-
-* **TF-IDF Vectorization**
-* **Cosine Similarity**
-
-👉 This gives a **matching score**
-
----
-
-6. Output
-
-The system returns:
-
-* Similarity score
-* Skills found in resume
-* Skills required in job
-
----
-
+✨ Features
+📄 Resume parsing (TXT format)
+🧠 Skill extraction using keyword matching
+📊 Resume vs Job Description comparison
+📈 Similarity scoring using NLP techniques
+⚡ FastAPI backend for real-time analysis
+🔍 Clear output showing skills and match score
+🛠️ Tech Stack
+Python → Core programming language
+FastAPI → Backend API development
+Scikit-learn → TF-IDF & Cosine Similarity
+Basic NLP → Skill extraction
+Uvicorn → Server
+📁 Folder Structure
+resume-screening-tool/
+│
+├── main.py              # FastAPI application
+├── parser.py            # Resume reader
+├── matcher.py           # Skill extraction logic
+├── scorer.py            # Similarity calculation
+├── requirements.txt     # Dependencies
+├── README.md            # Documentation
+│
+├── data/
+│   └── resumes/
+│       ├── resume1.txt
+│       └── resume2.txt
+│
+├── uploads/             # Temporary uploaded files
+▶️ How to Run the Project
+Step 1: Clone the repository
+git clone https://github.com/your-username/resume-screening-tool.git
+cd resume-screening-tool
+Step 2: Install dependencies
+pip install -r requirements.txt
+Step 3: Run the server
+uvicorn main:app --reload
+Step 4: Open in browser
+http://127.0.0.1:8000/docs
+🧪 Sample Input
+Resume (resume1.txt)
+Data analyst skilled in Python, SQL, Excel and Power BI.
+Job Description
+Looking for a data analyst with Python, SQL, Tableau and communication skills.
 📊 Sample Output
+Similarity Score: 0.78
 
-Example:
+Resume Skills:
+['python', 'sql', 'excel', 'power bi']
 
-* Similarity Score: **0.78**
-* Resume Skills: `python, sql, excel`
-* Job Skills: `python, sql, tableau`
+Job Description Skills:
+['python', 'sql', 'tableau', 'communication']
 
 👉 Interpretation:
 
-* Candidate matches most requirements
-* Missing skill: Tableau
+Candidate matches most required skills
+Missing skills: Tableau, Communication
 
----
 
-📁 Project Structure
+🎓 Learning Outcomes
 
-resume-screening-tool/
-│
-├── main.py          # FastAPI application
-├── parser.py        # Reads resume file
-├── matcher.py       # Extracts skills
-├── scorer.py        # Calculates similarity
-├── requirements.txt # Dependencies
-├── README.md        # Project documentation
-├── data/            # Sample resumes
+Through this project, I learned:
 
----
-
-▶️ How to Run the Project
-
-Step 1: Install dependencies
-
-pip install -r requirements.txt
-
-Step 2: Run the server
-
-uvicorn main:app --reload
-
-Step 3: Open in browser
-
-http://127.0.0.1:8000/docs
-
----
-
-🧪 How to Test
-
-* Upload a sample resume (.txt file)
-* Enter a job description
-* Click **Execute**
-
-👉 You will see the result instantly
-
----
-
-🔍 Key Features
-
-✔ Simple and easy to use
-✔ Fast resume screening
-✔ Skill-based matching
-✔ Real-world HR use case
-
----
-
-⚠️ Limitations
-
-* Works only with `.txt` files (currently)
-* Uses keyword-based skill matching
-* Does not fully understand context
-
----
-
-🔮 Future Improvements
-
-* Add PDF and DOCX support
-* Build frontend dashboard
-* Improve NLP using machine learning
-* Add candidate ranking system
-
----
-
-💼 Real-World Relevance
-
-This project is useful for:
-
-* HR professionals
-* Recruiters
-* Companies handling bulk hiring
-
----
-
-🎤 Interview Explanation (How to Explain)
-
-You can say:
-
-"I built an Automated Resume Screening Tool using FastAPI and NLP techniques.
-It extracts skills from resumes, compares them with job descriptions using TF-IDF and cosine similarity, and provides a matching score to help in candidate shortlisting."
-
----
-
-🙌 Conclusion
-
-This project demonstrates:
-
-* Backend development
-* Basic NLP concepts
-* Real-world HR application
-
-It is a strong **proof-of-work project** for roles like:
-
-* Data Analyst
-* Business Analyst
-* HR Analyst
-
----
-
+✅ How to build REST APIs using FastAPI
+✅ Basics of Natural Language Processing (NLP)
+✅ How TF-IDF and Cosine Similarity work
+✅ How to structure a real-world project
+✅ GitHub project management and documentation
+✅ Understanding of HR tech and ATS systems
