@@ -159,19 +159,6 @@ Job Description Skills:
 
 ---
 
-## 📸 Screenshots
-
-*(Add these after running your project)*
-
-1. FastAPI Swagger UI (`/docs`)
-2. Resume upload screen
-3. Output response with similarity score
-4. Project folder structure
-
-👉 Tip: Take screenshots using your system and upload them to your GitHub repo.
-
----
-
 ## 🎓 Learning Outcomes
 
 Through this project, I learned:
@@ -185,31 +172,5 @@ Through this project, I learned:
 
 ---
 
-## 🔮 Future Improvements
 
-* Support for PDF and DOCX resumes
-* Advanced NLP models for better accuracy
-* Candidate ranking system
-* Frontend dashboard (React / Next.js)
-* Database integration
-
----
-
-## 🎤 Interview Explanation
-
-“I developed an Automated Resume Screening Tool that uses NLP techniques like TF-IDF and cosine similarity to compare resumes with job descriptions. It extracts skills, calculates a matching score, and helps in efficient candidate shortlisting.”
-
----
-
-## 🙌 Conclusion
-
-This project demonstrates a **real-world application of Python, NLP, and HR analytics**.
-
-It serves as a strong **proof-of-work project** for roles such as:
-
-* Data Analyst
-* Business Analyst
-* HR Analyst
-
----
 
